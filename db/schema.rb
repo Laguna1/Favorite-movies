@@ -10,15 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_21_185453) do
+ActiveRecord::Schema.define(version: 2021_12_21_185314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "comparisons", force: :cascade do |t|
-    t.integer "superior_movie_id"
-    t.integer "interior_movie_id"
-  end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
