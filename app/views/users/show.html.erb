@@ -18,4 +18,16 @@
     <% end %>
   </tbody>
 </table>
+
+<h3>Create a new Comparison</h3>
+
+<%= form_for @comparison do |f| %>
+  <input type="hidden" name="user[id]" value="<%= @user.id %>">
+
+  <%= f.label :superior_movie_id, "Superior Movie" %>
+  <%= f.collection_select :superior_movie_id, @movies, :id, :title %><br />
+
+  <%= f.label :interior_movie_id, "Inferior Movie" %>
+  <%= f.collection_select :interior_movie_id, @movies, :id, :title %><br /><br />
+<% end %>
 <small><%= link_to '<< Back to Users List', users_path %></small>
