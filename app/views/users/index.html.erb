@@ -1,0 +1,8 @@
+<h1>Users#index</h1>
+<div>
+  <% @users.each do |user| %>
+    <h3><%= link_to user.name, user_path(user) %></h3>
+  <% end %>
+</div>
+
+<small><%= link_to 'Show Movies List >>', movies_path %></small><br />
