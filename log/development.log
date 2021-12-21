@@ -1,0 +1,137 @@
+  [1m[35m (2654.6ms)[0m  [1m[35mCREATE DATABASE "favorite_movies_development" ENCODING = 'unicode'[0m
+  [1m[35m (1514.6ms)[0m  [1m[35mCREATE DATABASE "favorite_movies_test" ENCODING = 'unicode'[0m
+  [1m[35m (437.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (202.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6648034164140697720)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20211221185314)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (146.0ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "title" character varying, "year" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211221185314"]]
+  [1m[36mTRANSACTION (18.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComparisons (20211221185453)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (60.8ms)[0m  [1m[35mCREATE TABLE "comparisons" ("id" bigserial primary key, "superior_movie_id" integer, "interior_movie_id" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211221185453"]]
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-21 18:56:44.678419"], ["updated_at", "2021-12-21 18:56:44.678419"]]
+  [1m[36mTRANSACTION (45.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6648034164140697720)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (6.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "The Dark Knight"], ["year", 2000]]
+  [1m[36mTRANSACTION (194.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "Pulp Fiction"], ["year", 1994]]
+  [1m[36mTRANSACTION (17.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "Citizen Kane"], ["year", 1941]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "The Dark Knight"], ["year", 2000]]
+  [1m[36mTRANSACTION (36.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "Pulp Fiction"], ["year", 1994]]
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "Citizen Kane"], ["year", 1941]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComparison Create (0.8ms)[0m  [1m[32mINSERT INTO "comparisons" ("superior_movie_id", "interior_movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["superior_movie_id", 4], ["interior_movie_id", 6]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComparison Create (0.4ms)[0m  [1m[32mINSERT INTO "comparisons" ("superior_movie_id", "interior_movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["superior_movie_id", 6], ["interior_movie_id", 5]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComparison Load (0.5ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (27.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (374.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "favorite_movies_development"[0m
+  [1m[35m (293.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "favorite_movies_test"[0m
+  [1m[35m (1535.6ms)[0m  [1m[35mCREATE DATABASE "favorite_movies_development" ENCODING = 'unicode'[0m
+  [1m[35m (1329.5ms)[0m  [1m[35mCREATE DATABASE "favorite_movies_test" ENCODING = 'unicode'[0m
+  [1m[35m (268.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (117.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6648034164140697720)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20211221185314)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (159.0ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "title" character varying, "year" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211221185314"]]
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComparisons (20211221185453)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (67.9ms)[0m  [1m[35mCREATE TABLE "comparisons" ("id" bigserial primary key, "superior_movie_id" integer, "interior_movie_id" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211221185453"]]
+  [1m[36mTRANSACTION (21.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-21 19:05:40.076801"], ["updated_at", "2021-12-21 19:05:40.076801"]]
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6648034164140697720)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "The Dark Knight"], ["year", 2000]]
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "Pulp Fiction"], ["year", 1994]]
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year") VALUES ($1, $2) RETURNING "id"[0m  [["title", "Citizen Kane"], ["year", 1941]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComparison Create (0.6ms)[0m  [1m[32mINSERT INTO "comparisons" ("superior_movie_id", "interior_movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["superior_movie_id", 1], ["interior_movie_id", 3]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComparison Create (0.3ms)[0m  [1m[32mINSERT INTO "comparisons" ("superior_movie_id", "interior_movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["superior_movie_id", 3], ["interior_movie_id", 2]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComparison Load (0.4ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  [1m[36mComparison Load (0.4ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" ORDER BY "comparisons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mComparison Load (0.5ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" ORDER BY "comparisons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mComparison Load (0.6ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" ORDER BY "comparisons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mComparison Load (0.7ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" ORDER BY "comparisons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mComparison Load (0.4ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" ORDER BY "comparisons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComparison Load (0.5ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" ORDER BY "comparisons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mComparison Load (0.4ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."superior_movie_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["superior_movie_id", 1], ["LIMIT", 11]]
+  [1m[36mComparison Load (0.4ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."superior_movie_id" = $1 ORDER BY "comparisons"."id" ASC LIMIT $2[0m  [["superior_movie_id", 1], ["LIMIT", 1]]
+  [1m[36mComparison Load (0.5ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."superior_movie_id" = $1 ORDER BY "comparisons"."id" ASC LIMIT $2[0m  [["superior_movie_id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mComparison Load (0.3ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."superior_movie_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["superior_movie_id", 1], ["LIMIT", 11]]
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."interior_movie_id" WHERE "comparisons"."superior_movie_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["superior_movie_id", 1], ["LIMIT", 11]]
+  [1m[36mComparison Load (0.4ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" ORDER BY "comparisons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."interior_movie_id" WHERE "comparisons"."superior_movie_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["superior_movie_id", 1], ["LIMIT", 11]]
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."superior_movie_id" WHERE "comparisons"."interior_movie_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["interior_movie_id", 3], ["LIMIT", 11]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."interior_movie_id" WHERE "comparisons"."superior_movie_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["superior_movie_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comparisons"[0m
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."superior_movie_id" WHERE "comparisons"."interior_movie_id" = $1[0m  [["interior_movie_id", 2]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComparison Create (0.8ms)[0m  [1m[32mINSERT INTO "comparisons" ("superior_movie_id", "interior_movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["superior_movie_id", 1], ["interior_movie_id", 2]]
+  [1m[36mTRANSACTION (18.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."superior_movie_id" WHERE "comparisons"."interior_movie_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["interior_movie_id", 2], ["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."superior_movie_id" WHERE "comparisons"."interior_movie_id" = $1[0m  [["interior_movie_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comparisons"[0m
