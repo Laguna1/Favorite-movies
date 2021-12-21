@@ -1409,3 +1409,272 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 55ms (Views: 33.4ms | ActiveRecord: 11.3ms | Allocations: 10176)
 
 
+Started GET "/users" for ::1 at 2021-12-22 00:01:37 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 2524)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 5549)
+Completed 200 OK in 30ms (Views: 14.2ms | ActiveRecord: 12.0ms | Allocations: 7840)
+
+
+Started GET "/users/1" for ::1 at 2021-12-22 00:01:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mComparison Load (5.0ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mMovie Load (2.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mMovie Load (2.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/users/show.html.erb:28
+  Rendered users/show.html.erb within layouts/application (Duration: 67.6ms | Allocations: 9329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.9ms | Allocations: 12274)
+Completed 200 OK in 106ms (Views: 52.2ms | ActiveRecord: 28.2ms | Allocations: 18973)
+
+
+Started GET "/users/1" for ::1 at 2021-12-22 00:02:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mComparison Load (1.3ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mMovie Load (2.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mMovie Load (2.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/users/show.html.erb:28
+  Rendered users/show.html.erb within layouts/application (Duration: 305.6ms | Allocations: 7719)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 313.6ms | Allocations: 10924)
+Completed 200 OK in 321ms (Views: 307.3ms | ActiveRecord: 9.3ms | Allocations: 12719)
+
+
+Started POST "/comparisons" for ::1 at 2021-12-22 00:02:55 +0200
+Processing by ComparisonsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"id"=>"1"}, "comparison"=>{"superior_movie_id"=>"2", "interior_movie_id"=>"1"}, "commit"=>"Create Comparison"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 610)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/comparisons_controller.rb:3:in `create'
+Started POST "/comparisons" for ::1 at 2021-12-22 00:03:21 +0200
+Processing by ComparisonsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"id"=>"1"}, "comparison"=>{"superior_movie_id"=>"2", "interior_movie_id"=>"1"}, "commit"=>"Create Comparison"}
+Completed 404 Not Found in 18ms (ActiveRecord: 4.2ms | Allocations: 2739)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/comparisons_controller.rb:3:in `create'
+Started POST "/comparisons" for ::1 at 2021-12-22 00:07:22 +0200
+Processing by ComparisonsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"id"=>"1"}, "comparison"=>{"superior_movie_id"=>"2", "interior_movie_id"=>"1"}, "commit"=>"Create Comparison"}
+Completed 404 Not Found in 14ms (ActiveRecord: 5.8ms | Allocations: 2704)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/comparisons_controller.rb:4:in `create'
+Started POST "/comparisons" for ::1 at 2021-12-22 00:10:34 +0200
+Processing by ComparisonsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"id"=>"1"}, "comparison"=>{"superior_movie_id"=>"2", "interior_movie_id"=>"1"}, "commit"=>"Create Comparison"}
+Completed 404 Not Found in 16ms (ActiveRecord: 6.5ms | Allocations: 2704)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/comparisons_controller.rb:4:in `create'
+Started POST "/comparisons" for ::1 at 2021-12-22 00:11:27 +0200
+Processing by ComparisonsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"id"=>"1"}, "comparison"=>{"superior_movie_id"=>"2", "interior_movie_id"=>"1"}, "commit"=>"Create Comparison"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 645)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/comparisons_controller.rb:4:in `create'
+Started POST "/comparisons" for ::1 at 2021-12-22 00:13:49 +0200
+Processing by ComparisonsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"id"=>"1"}, "comparison"=>{"superior_movie_id"=>"2", "interior_movie_id"=>"1"}, "commit"=>"Create Comparison"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comparisons_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mComparison Create (90.0ms)[0m  [1m[32mINSERT INTO "comparisons" ("superior_movie_id", "interior_movie_id", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["superior_movie_id", 2], ["interior_movie_id", 1], ["user_id", 1]]
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (63.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+No template found for ComparisonsController#create, rendering head :no_content
+Completed 204 No Content in 377ms (ActiveRecord: 238.6ms | Allocations: 19088)
+
+
+Started GET "/" for ::1 at 2021-12-22 00:14:37 +0200
+  [1m[35m (18.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oksana/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oksana/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 42.7ms | Allocations: 336)
+Completed 200 OK in 119ms (Views: 46.0ms | ActiveRecord: 0.0ms | Allocations: 2532)
+
+
+Started GET "/users" for ::1 at 2021-12-22 00:14:45 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 2748)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 96.0ms | Allocations: 8439)
+Completed 200 OK in 296ms (Views: 128.8ms | ActiveRecord: 12.1ms | Allocations: 11987)
+
+
+Started GET "/users/1" for ::1 at 2021-12-22 00:14:48 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mComparison Load (1.1ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/users/show.html.erb:28
+  Rendered users/show.html.erb within layouts/application (Duration: 371.1ms | Allocations: 14040)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 376.8ms | Allocations: 16976)
+Completed 200 OK in 706ms (Views: 365.9ms | ActiveRecord: 21.8ms | Allocations: 25508)
+
+
+Started GET "/users" for ::1 at 2021-12-22 00:15:01 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3969)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 2.3ms | Allocations: 4371)
+
+
+Started GET "/users/2" for ::1 at 2021-12-22 00:15:03 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mComparison Load (1.5ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/users/show.html.erb:28
+  Rendered users/show.html.erb within layouts/application (Duration: 43.4ms | Allocations: 5016)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.0ms | Allocations: 8702)
+Completed 200 OK in 70ms (Views: 53.0ms | ActiveRecord: 12.0ms | Allocations: 9776)
+
+
+Started POST "/comparisons" for ::1 at 2021-12-22 00:15:25 +0200
+Processing by ComparisonsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"id"=>"2"}, "comparison"=>{"superior_movie_id"=>"2", "interior_movie_id"=>"1"}, "commit"=>"Create Comparison"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comparisons_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mComparison Create (2.0ms)[0m  [1m[32mINSERT INTO "comparisons" ("superior_movie_id", "interior_movie_id", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["superior_movie_id", 2], ["interior_movie_id", 1], ["user_id", 2]]
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comparisons_controller.rb:5:in `create'
+No template found for ComparisonsController#create, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 32.5ms | Allocations: 7514)
+
+
+Started GET "/users/2" for ::1 at 2021-12-22 00:15:36 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mComparison Load (1.6ms)[0m  [1m[34mSELECT "comparisons".* FROM "comparisons" WHERE "comparisons"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mMovie Load (3.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/users/show.html.erb:28
+  Rendered users/show.html.erb within layouts/application (Duration: 31.3ms | Allocations: 6130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 9178)
+Completed 200 OK in 46ms (Views: 29.9ms | ActiveRecord: 11.3ms | Allocations: 10272)
+
+

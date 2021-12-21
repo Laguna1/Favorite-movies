@@ -29,5 +29,7 @@
 
   <%= f.label :interior_movie_id, "Inferior Movie" %>
   <%= f.collection_select :interior_movie_id, @movies, :id, :title %><br /><br />
+  
+  <%= f.submit %>
 <% end %>
 <small><%= link_to '<< Back to Users List', users_path %></small>

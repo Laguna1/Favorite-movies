@@ -7,6 +7,5 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @movies = Movie.all
     @comparison = Comparison.new
-    @comparisons = Comparison.all
   end
 end
