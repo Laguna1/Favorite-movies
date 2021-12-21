@@ -897,3 +897,195 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 2.7ms | Allocations: 4300)
 
 
+Started GET "/movies" for ::1 at 2021-12-21 23:18:18 +0200
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4216)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 1.1ms | Allocations: 5312)
+
+
+Started GET "/movies/1" for ::1 at 2021-12-21 23:18:19 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3101)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.8ms | Allocations: 4277)
+
+
+Started GET "/movies/1" for ::1 at 2021-12-21 23:18:41 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3284)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 1.7ms | Allocations: 5042)
+
+
+Started GET "/movies/1" for ::1 at 2021-12-21 23:19:20 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3287)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 1.7ms | Allocations: 5039)
+
+
+Started GET "/movies/1" for ::1 at 2021-12-21 23:19:35 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (2.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3285)
+Completed 200 OK in 17ms (Views: 7.2ms | ActiveRecord: 2.5ms | Allocations: 5039)
+
+
+Started GET "/movies/1" for ::1 at 2021-12-21 23:20:25 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3379)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.7ms | Allocations: 5137)
+
+
+Started GET "/movies/1" for ::1 at 2021-12-21 23:20:40 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3374)
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 0.8ms | Allocations: 5132)
+
+
+Started GET "/movies" for ::1 at 2021-12-21 23:20:42 +0200
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4706)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 1.9ms | Allocations: 5222)
+
+
+Started GET "/movies" for ::1 at 2021-12-21 23:21:01 +0200
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 4249)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 1.8ms | Allocations: 5341)
+
+
+Started GET "/users" for ::1 at 2021-12-21 23:21:04 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5213)
+Completed 200 OK in 23ms (Views: 12.5ms | ActiveRecord: 6.6ms | Allocations: 7643)
+
+
+Started GET "/users" for ::1 at 2021-12-21 23:21:40 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 4236)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 3.9ms | Allocations: 5334)
+
+
+Started GET "/users" for ::1 at 2021-12-21 23:21:52 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4230)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 1.4ms | Allocations: 5323)
+
+
+Started GET "/movies" for ::1 at 2021-12-21 23:21:54 +0200
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1099)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 4748)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 1.4ms | Allocations: 5626)
+
+
+Started GET "/movies/1" for ::1 at 2021-12-21 23:21:57 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3198)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 1.3ms | Allocations: 4374)
+
+
+Started GET "/movies/1" for ::1 at 2021-12-21 23:24:57 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "comparisons" ON "users"."id" = "comparisons"."user_id" WHERE "comparisons"."superior_movie_id" = $1[0m  [["superior_movie_id", 1]]
+  ↳ app/views/movies/show.html.erb:6
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "comparisons" ON "users"."id" = "comparisons"."user_id" WHERE "comparisons"."interior_movie_id" = $1[0m  [["interior_movie_id", 1]]
+  ↳ app/views/movies/show.html.erb:13
+  Rendered movies/show.html.erb within layouts/application (Duration: 70.2ms | Allocations: 9381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 12444)
+Completed 200 OK in 88ms (Views: 73.1ms | ActiveRecord: 9.3ms | Allocations: 14202)
+
+

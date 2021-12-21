@@ -1,2 +1,19 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1><small>Movie`s </small><%= @movie.title %> page</h1>
+<p>Year: <%= @movie.year %></p>
+
+<h4>My Fans: </h4>
+<ul>
+  <% @movie.fans.each do |user| %>
+    <li><%= user.name %></li>
+    <% end %>
+</ul><br />
+
+<h4>My Haters: </h4>
+<ul>
+  <% @movie.haters.each do |user| %>
+    <li><%= user.name %></li>
+    <% end %>
+</ul><br />
+
+<small><%= link_to '<< Back to Movies List', movies_path %></small><br />
+<small><%= link_to '<< Back to Users List', users_path %></small>
