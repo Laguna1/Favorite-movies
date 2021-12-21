@@ -135,3 +135,100 @@ Migrating to CreateComparisons (20211221185453)
   [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."superior_movie_id" WHERE "comparisons"."interior_movie_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["interior_movie_id", 2], ["LIMIT", 11]]
   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies" INNER JOIN "comparisons" ON "movies"."id" = "comparisons"."superior_movie_id" WHERE "comparisons"."interior_movie_id" = $1[0m  [["interior_movie_id", 2]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comparisons"[0m
+Started GET "/" for ::1 at 2021-12-21 22:31:51 +0200
+Started GET "/" for ::1 at 2021-12-21 22:31:51 +0200
+  [1m[35m (33.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oksana/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering /home/oksana/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oksana/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 68.7ms | Allocations: 455)
+Completed 200 OK in 239ms (Views: 134.1ms | ActiveRecord: 0.0ms | Allocations: 3845)
+
+
+  Rendered /home/oksana/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 68.7ms | Allocations: 498)
+Completed 200 OK in 384ms (Views: 192.1ms | ActiveRecord: 0.0ms | Allocations: 4426)
+
+
+Started GET "/users" for ::1 at 2021-12-21 22:35:27 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 104)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/home/oksana/Favorite-movies/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+Error: Cannot find module '@rails/webpacker'
+Require stack:
+- /home/oksana/Favorite-movies/config/webpack/environment.js
+- /home/oksana/Favorite-movies/config/webpack/development.js
+- /home/oksana/Favorite-movies/node_modules/webpack-cli/bin/utils/convert-argv.js
+- /home/oksana/Favorite-movies/node_modules/webpack-cli/bin/cli.js
+- /home/oksana/Favorite-movies/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:925:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:769:27)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (/home/oksana/Favorite-movies/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/oksana/Favorite-movies/config/webpack/environment.js:1:87)
+    at Module._compile (/home/oksana/Favorite-movies/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (/home/oksana/Favorite-movies/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/oksana/Favorite-movies/config/webpack/development.js:3:21)
+    at Module._compile (/home/oksana/Favorite-movies/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (/home/oksana/Favorite-movies/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/oksana/Favorite-movies/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/oksana/Favorite-movies/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/oksana/Favorite-movies/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/oksana/Favorite-movies/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at /home/oksana/Favorite-movies/node_modules/webpack-cli/bin/cli.js:71:45
+    at Object.parse (/home/oksana/Favorite-movies/node_modules/yargs/yargs.js:576:18)
+    at /home/oksana/Favorite-movies/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/oksana/Favorite-movies/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/oksana/Favorite-movies/config/webpack/environment.js',
+    '/home/oksana/Favorite-movies/config/webpack/development.js',
+    '/home/oksana/Favorite-movies/node_modules/webpack-cli/bin/utils/convert-argv.js',
+    '/home/oksana/Favorite-movies/node_modules/webpack-cli/bin/cli.js',
+    '/home/oksana/Favorite-movies/node_modules/webpack/bin/webpack.js'
+  ]
+}
+
+  Rendered layout layouts/application.html.erb (Duration: 11746.6ms | Allocations: 17227)
+Completed 500 Internal Server Error in 11886ms (ActiveRecord: 0.0ms | Allocations: 18288)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/oksana/Favorite-movies/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
