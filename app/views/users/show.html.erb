@@ -1,1 +1,20 @@
 <h3><%= @user.name %> page</h3>
+<h4>Movie Comparisons</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Superior Movies</th>
+      <th>Inferior Movies</th>
+    </tr>
+  </thead>
+    
+  <tbody>
+    <% @user.comparisons.each do |comparison|%>
+    <tr>
+      <td><%= comparison.superior_movie.title %></td>
+      <td><%= comparison.interior_movie.title %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
