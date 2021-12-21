@@ -1,24 +1,38 @@
 # README
+## Favorite movies
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I had tried to understand how to build teh triple join table here.
 
-Things you may want to cover:
+* Ruby version - `2.7.2`
+- Rails version - `6.1.4.1`
+- Postgres: >=9.5
 
-* Ruby version
+- Run this App
+- Clone this repository to your local: `git@github.com:Laguna1/Favorite-movies.git`
+- From your terminal:
+navigate inside the repository through your terminal `cd Favorite-movies`
+run `bundle install` for install gem dependencies
+ - Create the database `rails db:create`
+ - Migrate tables into your database `rails db:migrate`
+ - Seed the database `rails db:seed`
+ - Start a Rails server `rails s`
+In your browser, type into your url `http://localhost:3000/users`
+or `http://localhost:3000/movies`
 
-* System dependencies
+### Author
 
-* Configuration
+👤 **Oksana Petrova**
 
-* Database creation
+- GitHub: [@github/Laguna1](https://github.com/Laguna1)
+- Linkedin: [linkedin/OksanaPetrova](https://www.linkedin.com/in/oksana-petrova/)
+- Twitter: [@OksanaP48303303](https://twitter.com/OksanaP48303303)
 
-* Database initialization
+## 🤝 Contributing
 
-* How to run the test suite
+Contributions, issues and feature requests are welcome!
 
-* Services (job queues, cache servers, search engines, etc.)
+Feel free to check the [issues page](https://github.com/Laguna1/Favorite-movies/issues).
 
-* Deployment instructions
+## Show your support
 
-* ...
+Give a ⭐️ if you like this project!
