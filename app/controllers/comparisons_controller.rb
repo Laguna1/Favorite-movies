@@ -7,6 +7,4 @@ class ComparisonsController < ApplicationController
                       interior_movie_id: params[:comparison][:interior_movie_id])
     redirect_to user_path(user)
   end
-
-
 end
