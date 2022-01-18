@@ -3,6 +3,8 @@
 
 I had tried to understand how to build teh triple join table here.
 
+![ERD diagram](./app/assets/images/erd.jpg)
+
 * Ruby version - `2.7.2`
 - Rails version - `6.1.4.1`
 - Postgres: >=9.5
